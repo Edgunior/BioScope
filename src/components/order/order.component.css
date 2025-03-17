@@ -1,0 +1,45 @@
+.order-card {
+    max-width: 500px;
+    min-width: 450px;
+    margin: 30px auto; /* Centers the card horizontally */
+    text-align: center; /* Centers text inside */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Adds spacing */
+    border: 1px solid #fff4e6;
+    background-color: #305872 !important;
+}
+
+mat-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+mat-form-field.full-width {
+    width: 80% !important; 
+    display: flex;
+    justify-content: center; /* Centers form elements */
+}
+
+mat-select, input {
+    text-align: center; /* Centers text inside input/select */
+}
+
+
+mat-option {
+    background-color: #305872 !important;
+}
+
+
+mat-card-actions {
+    display: flex;
+    justify-content: center; /* Centers the button */
+    width: 100%;
+}
+
+button {
+    width: 80%; /* Makes button larger */
+}

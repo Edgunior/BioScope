@@ -1,0 +1,17 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #305872 !important;
+}
+
+th {
+    color: #acc5d6 !important;
+}
+
+td {
+    color: #acc5d6 !important;
+}
+
+mat-expansion-panel {
+    width: 30%;
+}

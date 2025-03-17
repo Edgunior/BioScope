@@ -1,0 +1,22 @@
+<ng-template #loading>
+  <p>Loading movies...</p>
+</ng-template>
+
+<div *ngIf="movies?.length; else loading" class="container">
+  <div *ngFor="let row of getMovieRows()" class="movie-row">
+    <mat-card class="example-card" appearance="outlined" *ngFor="let movie of row">
+      <a [routerLink]="['/details', movie.movieId]">
+        <img mat-card-image [src]="movie.poster" *ngIf="movie?.poster" />
+      </a>
+      <mat-card-content class="content">
+        <h3>{{ movie.title }}</h3>
+        <p>{{ movie.shortDescription }}</p>
+        <p>{{ "Dužina " + movie.runTime + " minuta" }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div *ngIf="error" class="error">
+  <p>{{ error }}</p>
+</div>

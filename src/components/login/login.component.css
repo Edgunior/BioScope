@@ -1,0 +1,24 @@
+mat-card {
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #fff4e6;
+    background-color: #305872;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .full-width {
+    width: 51%;
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: center;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 0 auto;
+  }

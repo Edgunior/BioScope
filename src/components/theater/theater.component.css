@@ -1,0 +1,33 @@
+.mat-table-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+table {
+    height: 40vh !important; 
+    margin: auto; 
+    border: 1px solid #fff4e6;
+    background-color: #305872; 
+    color: #acc5d6; 
+}
+
+th {
+    color: #acc5d6; 
+    font-size: 1.2rem; 
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #fff4e6;
+}
+
+td {
+    color: #acc5d6; 
+    font-size: 1rem;
+    padding: 8px;
+    border-bottom: 1px solid #fff4e6;
+}
+
+.mat-elevation-z8 {
+    border-radius: 10px; 
+    overflow: hidden; 
+}

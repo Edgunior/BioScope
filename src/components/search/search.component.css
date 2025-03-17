@@ -1,0 +1,32 @@
+table {
+    background-color: #305872 !important;
+    border: 1px solid #fff4e6;
+    width: 95%;
+}
+
+th {
+    color: #acc5d6 !important;
+}
+
+td {
+    color: #acc5d6 !important;
+}
+
+mat-option {
+    background-color: #305872 !important;
+    border-bottom: 1px solid #fff4e6;
+}
+
+.search-card {
+    display: grid;
+    place-items: center; /* Centers horizontally and vertically */
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  

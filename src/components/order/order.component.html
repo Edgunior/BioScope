@@ -1,0 +1,46 @@
+<div *ngIf="selectedMovie; else loading">
+    <mat-card class="order-card">
+        <img mat-card-image [src]="selectedMovie.poster" *ngIf="selectedMovie?.poster" />
+
+        <mat-card-content>
+            <h3>Nova Porudžbina</h3>
+
+            <mat-form-field class="full-width">
+                <mat-label>Film</mat-label>
+                <input matInput [value]="selectedMovie.title || 'N/A'" disabled />
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label>Izaberi bioskop</mat-label>
+                <mat-select [(ngModel)]="selectedTheaterId">
+                    <mat-option *ngFor="let theater of theaters" [value]="theater.id">
+                        {{ theater.name }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label>Broj Tiketa</mat-label>
+                <input type="number" matInput [(ngModel)]="selectedTicketCount" min="1" />
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label>Cena</mat-label>
+                <mat-select [(ngModel)]="selectedPrice" panelClass="full-width">
+                    <mat-option [value]="5"> Sedište - 5&euro;</mat-option>
+                    <mat-option [value]="10"> VIP Sedište - 10&euro;</mat-option>
+                </mat-select>
+            </mat-form-field>
+            
+        </mat-card-content>
+        
+        <mat-card-actions>
+            <button mat-button (click)="doOrder()">KUPI KARTU</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<!-- Show this while the movie is loading -->
+<ng-template #loading>
+    <p>Loading movie details...</p>
+</ng-template>

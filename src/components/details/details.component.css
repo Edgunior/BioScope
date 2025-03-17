@@ -1,0 +1,72 @@
+h3, h4, p {
+    margin-bottom: 2px;
+    margin-left: 7px;
+    padding: 0px;
+}
+
+.detailsCard {
+    margin: auto;
+    max-width: 400px; 
+    border-radius: 10px; 
+    background-color: #305872 !important;
+    border-radius: 7px !important;
+    border: 3px solid ;
+  }
+  
+  .genre-list {
+    display: flex;
+    gap: 5px; 
+    flex-wrap: wrap; 
+  }
+  
+  .actor-list {
+    display: flex;
+    flex-wrap: wrap;  
+    gap: 10px; 
+  }
+  
+  .actor-list span {
+    background-color: #fff4e6;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .director-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .director-list span {
+    background-color: #eee;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .book-now {
+    width: 100%;
+    padding: 0; /* Remove extra padding */
+  }
+  
+  .full-width-btn {
+    width: 100%; /* Makes the button stretch across */
+    background-color: inherit; /* Matches card's background */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Subtle border */
+    border-radius: 7px;
+    color: #fff4e6; /* Adjust text color */
+    padding: 12px 0; /* Increase click area */
+    font-weight: bold; /* Make it stand out */
+    text-align: center;
+    margin-top: 10px;
+  
+  
+  }   &:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight hover effect */
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }

@@ -1,0 +1,36 @@
+<mat-toolbar>
+    <span style="font-family:monospace !important;">
+       <a href="/">  <i class="fa-solid fa-masks-theater"> BioScope </i>
+       </a>
+    </span>
+    <span class="spacer"></span>
+   
+    <a routerLink="./search" mat-button>
+        <i class="fa-solid fa-magnifying-glass"></i> Pretraga
+    </a>
+
+    <a routerLink="/theater" mat-button>
+        <i class="fa-solid fa-film"></i>  Bioskopi
+    </a>
+
+    <a *ngIf="userService.getActiveUser()" mat-button routerLink="/user">
+        <i class="fa-solid fa-user"></i> 
+        Profil</a>
+
+    <button *ngIf="userService.getActiveUser()" mat-button (click)="doLogout()">
+        <i class="fa-solid fa-right-from-bracket"></i> Odjavi se</button>
+
+    <a *ngIf="!userService.getActiveUser()" mat-button routerLink="/login">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        Prijavi se
+    </a>
+
+    <a *ngIf="!userService.getActiveUser()" mat-button routerLink="/signup">
+        <i class="fa-solid fa-right-from-bracket"></i>
+         Registruj se</a>
+
+    <a routerLink="/about" mat-button>
+        <i class="fa-solid fa-circle-info"></i> O nama
+    </a>
+</mat-toolbar>
+<router-outlet/>

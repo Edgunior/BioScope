@@ -1,0 +1,49 @@
+<mat-card>
+<div *ngIf="movie" class="detailsCard">
+  <img mat-card-image [src]="movie.poster" *ngIf="movie?.poster"  alt="{{ movie.title }}"/>
+
+  <mat-card-content class="content">
+
+    <h3>{{ movie.title }}</h3>
+    <div *ngIf="movie?.movieGenres?.length" class="genre-list">
+      <h4 *ngFor="let genre of movie?.movieGenres">
+        {{ genre.genre.name + ' |'}}
+    </h4>
+    </div>
+
+    <h4>{{"Datum Izlaska: " + utils.formatDate(movie.createdAt) }}</h4>
+
+    <h4>{{ "Dužina: " + movie.runTime + " minuta" }}</h4>
+
+    <h4>Opis:</h4>
+    <p>{{ movie.description }}</p>
+
+    <div *ngIf="movie?.director">
+      <h4>Režiser:</h4>
+      <div class="director-list">
+      <span>{{ movie.director.name }}</span>
+    </div>
+    </div>
+    
+
+    <div *ngIf="movie?.movieActors?.length">
+      <h4>Glumci:</h4>
+      <div class="actor-list">
+        <span *ngFor="let actor of movie.movieActors">
+          {{ actor.actor.name }}
+        </span>
+      </div>
+    </div>
+    
+    <mat-card-actions class="book-now">
+      <a mat-button [routerLink]="['/details/',movie.movieId,'order']" class="full-width-btn">KUPI KARTU</a>
+    </mat-card-actions>
+
+  </mat-card-content>
+</div>
+
+</mat-card>
+
+<div *ngIf="!movie">
+  <p>Loading movie details...</p>
+</div>
