@@ -1,5 +1,9 @@
 # Bioscope
 
+Bioscope je web aplikacija namenjena kupovini karata za bioskope. Koristi REST API za preuzimanje informacija o filmovima, projekcijama i dostupnim sedištima, omogućavajući korisnicima jednostavno pretraživanje i rezervaciju karata. Aplikacija je razvijena kao deo predmeta Klijentske veb aplikacije, sa fokusom na modernu frontend arhitekturu i korisničko iskustvo.
+
+
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.8.
 
 ## Development server
